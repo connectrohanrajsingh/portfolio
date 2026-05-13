@@ -1,294 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Notes — Rohan Raj Singh</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="assets/bootstrap.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+  <script src="assets/dark-mode.js"></script>
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>engineer-notes</title>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img class="navbar-logo" src="assets/logo.png" alt="RRS"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <div class="navbar-nav ms-auto align-items-center gap-1">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="tech-stack.html">Tech Stack</a>
+        <a class="nav-link active" href="engineering-notes.html">Notes</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" id="themeToggle">&#127769;</button>
+      </div>
+    </div>
+  </div>
+</nav>
 
-        <link rel="icon" href="assets/favicon.png" type="image/png">
-        <link href="assets/bootstrap.css" rel="stylesheet">
-        <link href="assets/style.css" rel="stylesheet">
-        <script src="assets/dark-mode.js"></script>
-    </head>
+<div class="container">
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Systems Thinking</div>
+      <h2>Notes on software behavior, architecture decisions, and engineering trade-offs.</h2>
+      <p>A living space for documenting how I reason about systems beyond project delivery — not just what I build, but how I approach complexity, constraints, and software design choices.</p>
+    </div>
+  </section>
 
-    <body>
-        <nav class='navbar navbar-expand-lg border-bottom bg-white sticky-top shadow-sm'>
-            <div class='container'>
-                <a class='navbar-brand fw-semibold text-primary' href='index.html'><img class="navbar-logo" src="assets/logo.png" alt="RRS Logo"></a>
-
-                <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#mainNav'>
-                    <span class='navbar-toggler-icon'></span>
-                </button>
-
-                <div class='collapse navbar-collapse' id='mainNav'>
-                    <div class='navbar-nav ms-auto gap-lg-2 pt-3 pt-lg-0'>
-                        <a class="nav-link" href='index.html'>Overview</a>
-                        <a class="nav-link" href='experience.html'>Experience</a>
-                        <a class="nav-link" href='projects.html'>Projects</a>
-                        <a class="nav-link active fw-semibold" href='engineering-notes.html'>Engineering Notes</a>
-                        <a class="nav-link" href='tech-stack.html'>Tech Stack</a>
-                        <a class="nav-link" href='contact.html'>Contact</a>
-                        <button class="theme-toggle" id="themeToggle">🌙</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class='container py-5'>
-
-            <section class='mb-5'>
-                <div class='row g-4 align-items-center'>
-                    <div class='col-lg-8'>
-                        <div class='text-uppercase small text-secondary mb-2'>Systems Thinking</div>
-                        <h1 class='display-6 text-primary mb-3'>Notes on software behavior, architecture decisions, trade-offs, scalability concerns and ideas I keep exploring as an engineer.</h1>
-                        <p class='lead text-secondary'>A living space for documenting how I reason about systems beyond project delivery — not just what I build, but how I approach complexity, constraints and software design choices.</p>
-                    </div>
-                    <div class='col-lg-4'>
-                        <div class='border rounded p-4 bg-white shadow-sm'>
-                            <strong>Topics</strong>
-                            <hr>
-                            <div>• Transactions</div>
-                            <div>• Data Modeling</div>
-                            <div>• Scaling</div>
-                            <div>• Reliability</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Transactions & Concurrency</h3>
-                <div class='card border-0 shadow-sm'>
-                    <div class='card-body p-4'>
-                        <p>
-                            Transactions interest me not only as database concepts but as system behavior problems. I often think about what happens when multiple operations touch the same data, where locking matters, how isolation protects consistency, what logs imply for recovery, and how rollback mechanisms preserve correctness when systems fail under load or unexpected states emerge.
-                        </p>
-                        <div class='row g-3 mt-3'>
-                            <div class='col-md-4'>
-                                <div class='border rounded p-3'>
-                                    <h6>Atomicity</h6>
-                                    <p class='small mb-0'>Failure should preserve consistency.</p>
-                                </div>
-                            </div>
-                            <div class='col-md-4'>
-                                <div class='border rounded p-3'>
-                                    <h6>Concurrency</h6>
-                                    <p class='small mb-0'>How competing writes are coordinated.</p>
-                                </div>
-                            </div>
-                            <div class='col-md-4'>
-                                <div class='border rounded p-3'>
-                                    <h6>Recovery</h6>
-                                    <p class='small mb-0'>Rollback, logs and fault handling.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Database Thinking</h3>
-                <div class='row g-3'>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6 class='text-success'>Schema Design</h6>
-                            <p class='small'>I like thinking about schema design as a trade-off exercise. Normalization helps integrity, denormalization can help performance, and practical systems often live somewhere between theory and operational needs.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6 class='text-primary'>Query Behavior</h6>
-                            <p class='small'>Query behavior becomes increasingly interesting as systems grow — indexes, joins, temporary tables, query plans and how small design choices create major performance consequences.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Architecture Principles</h3>
-                <div class='border-start border-4 border-primary ps-4'>
-                    <p>• Simple systems often scale better than over-engineered ones
-                    <p>I prefer solving complexity carefully instead of introducing unnecessary abstraction too early.</p>
-                    </p>
-                    <p>• Reliability matters as much as feature completeness
-                    <p>Features matter less if systems fail unpredictably under pressure.</p>
-                    </p>
-                    <p>• Software should be understandable before it becomes clever
-                    <p>Readable systems tend to be maintainable systems.</p>
-                    </p>
-                    <p>• Design with failure paths in mind
-                    <p>Failure handling should be designed, not treated as an afterthought.</p>
-                    </p>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Topics I Explore</h3>
-                <div class='row g-3'>
-                    <div class='col-md-4'>
-                        <div class='card border-0 shadow-sm h-100'>
-                            <div class='card-body'>
-                                <h6>Scaling Thoughts</h6>
-                                <p class='small text-muted mb-0'>Thinking about how architecture decisions change when traffic increases, bottlenecks appear and assumptions stop holding.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='card border-0 shadow-sm h-100'>
-                            <div class='card-body'>
-                                <h6>System Failures</h6>
-                                <p class='small text-muted mb-0'>Exploring retries, graceful degradation, fault tolerance and what resilient behavior really means.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='card border-0 shadow-sm h-100'>
-                            <div class='card-body'>
-                                <h6>Distributed Ideas</h6>
-                                <p class='small text-muted mb-0'>Early curiosity around distributed systems, consistency trade-offs and how systems coordinate across boundaries.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Questions I Revisit Often</h3>
-                <div class='row g-3 mb-4'>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>How do systems fail under pressure?</h6>
-                            <p class='small mb-0'>I often think about bottlenecks, cascading failures, contention points and whether software degrades gracefully when assumptions break.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>Where should optimization happen?</h6>
-                            <p class='small mb-0'>Sometimes code is blamed when the issue is schema, query design or architecture boundaries. That distinction interests me.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row g-3 mb-5'>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>When should systems be simplified?</h6>
-                            <p class='small mb-0'>I revisit whether complexity is solving a real problem or just making a system harder to reason about.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>What happens when assumptions change?</h6>
-                            <p class='small mb-0'>Scale, data growth and usage patterns often expose assumptions hidden in initial designs.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Lessons I Keep Returning To</h3>
-                <div class='card border-0 shadow-sm'>
-                    <div class='card-body p-4'>
-                        <p><strong>Systems are often constrained more by design decisions than by raw infrastructure.</strong></p>
-                        <p>Good schema choices, simpler workflows and clear ownership often matter before bigger servers or more layers do.</p>
-
-                        <p><strong>Operational problems usually reveal software problems.</strong></p>
-                        <p>Many issues show up first as workflow pain, support pain or reporting pain long before they appear as obvious engineering problems.</p>
-
-                        <p><strong>Maintainability compounds.</strong></p>
-                        <p>Clean structures pay off over time just as messy systems accumulate interest in the opposite direction.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Topics I Want To Go Deeper Into</h3>
-                <div class='d-flex flex-wrap gap-2 mb-4'>
-                    <span class='badge text-bg-light border'>Concurrency Control</span>
-                    <span class='badge text-bg-light border'>Queue Architectures</span>
-                    <span class='badge text-bg-light border'>Caching Strategy</span>
-                    <span class='badge text-bg-light border'>Distributed Systems</span>
-                    <span class='badge text-bg-light border'>Fault Tolerance</span>
-                    <span class='badge text-bg-light border'>Event Driven Patterns</span>
-                </div>
-                <p>
-                    This page is partly current thinking and partly roadmap — topics I actively want to deepen over time.
-                </p>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Mistakes That Taught Me Something</h3>
-                <div class='row g-3'>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>Optimization Too Early</h6>
-                            <p class='small mb-0'>A recurring lesson is not every performance concern needs immediate complexity. Sometimes the right move is measurement first.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>Schema Decisions Echo</h6>
-                            <p class='small mb-0'>Small schema choices often have bigger downstream effects than they initially appear.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 bg-white shadow-sm h-100'>
-                            <h6>Debugging Teaches Design</h6>
-                            <p class='small mb-0'>Some of the best design lessons come from investigating failures and unexpected behavior.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Thought Experiments</h3>
-                <div class='card border-0 shadow-sm'>
-                    <div class='card-body p-4'>
-                        <p><strong>If usage increased 10x tomorrow, what would break first?</strong></p>
-                        <p>I like thinking through bottlenecks before they happen — query pressure, queues, write contention, reporting load.</p>
-
-                        <p><strong>If a workflow became distributed, what assumptions stop working?</strong></p>
-                        <p>Interesting questions emerge around coordination, consistency and boundaries between services.</p>
-
-                        <p><strong>What parts of a system deserve simplification before scaling?</strong></p>
-                        <p>Sometimes scaling begins with removing complexity, not adding more architecture.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Ideas I Keep Collecting</h3>
-                <div class='border-start border-4 border-success ps-4'>
-                    <p>• Reliability is often invisible when present and painful when absent.</p>
-                    <p>• Good software often comes from reducing accidental complexity.</p>
-                    <p>• Data behavior often tells you more about a system than UI behavior does.</p>
-                    <p>• Systems reveal their design quality under exceptions, not happy paths.</p>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Working Notes</h3>
-                <div class='card border-0 shadow-sm'>
-                    <div class='card-body'>
-                        <pre class='mb-0'>
-if(system_scales){
-optimize_queries();
-reduce_bottlenecks();
-preserve_consistency();
-}
-                        </pre>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h3 class='mb-3'>Why This Page Exists</h3>
-                <p>Projects show what I have built. This page exists to show how I think while building — the questions I ask, the trade-offs I notice and the principles I'm gradually shaping.</p>
-            </section>
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Concurrency</div>
+      <h2>Transactions & concurrency.</h2>
+    </div>
+    <div class="card-modern">
+      <p>Transactions interest me not only as database concepts but as system behavior problems. I often think about what happens when multiple operations touch the same data, where locking matters, how isolation protects consistency, what logs imply for recovery, and how rollback mechanisms preserve correctness when systems fail under load or unexpected states emerge.</p>
+      <div class="row g-3 mt-3">
+        <div class="col-md-4">
+          <div class="card-modern" style="box-shadow:none;border-style:dashed;">
+            <h6>Atomicity</h6>
+            <p style="margin:0;font-size:0.85rem;">Failure should preserve consistency — operations should complete fully or not at all.</p>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="card-modern" style="box-shadow:none;border-style:dashed;">
+            <h6>Concurrency</h6>
+            <p style="margin:0;font-size:0.85rem;">How competing writes are coordinated and what happens when isolation levels differ.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-modern" style="box-shadow:none;border-style:dashed;">
+            <h6>Recovery</h6>
+            <p style="margin:0;font-size:0.85rem;">Rollback mechanisms, transaction logs, and fault handling strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="assets/bootstrap.js"></script>
-        <script src="assets/script.js"></script>
-    </body>
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Data</div>
+      <h2>Database thinking.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>Schema Design</h5>
+          <p>Schema design is a trade-off exercise. Normalization helps integrity, denormalization can help performance, and practical systems often live somewhere between theory and operational needs. The best schema decisions account for both current requirements and foreseeable growth patterns.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>Query Behavior</h5>
+          <p>Query behavior becomes increasingly interesting as systems grow — indexes, joins, temporary tables, query plans, and how small design choices create major performance consequences at scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Principles</div>
+      <h2>Architecture principles.</h2>
+    </div>
+    <div class="principle-block">
+      <p><strong>Simple systems often scale better than over-engineered ones.</strong> I prefer solving complexity carefully instead of introducing unnecessary abstraction too early.</p>
+      <p><strong>Reliability matters as much as feature completeness.</strong> Features matter less if systems fail unpredictably under pressure.</p>
+      <p><strong>Software should be understandable before it becomes clever.</strong> Readable systems tend to be maintainable systems.</p>
+      <p><strong>Design with failure paths in mind.</strong> Failure handling should be designed, not treated as an afterthought.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Explore</div>
+      <h2>Topics I explore.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Scaling Thoughts</h5>
+          <p>How architecture decisions change when traffic increases, bottlenecks appear, and assumptions stop holding. What breaks first under load?</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>System Failures</h5>
+          <p>Retries, graceful degradation, fault tolerance, and what resilient behavior really means in production contexts.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Distributed Ideas</h5>
+          <p>Early curiosity around distributed systems, consistency trade-offs, and how systems coordinate across boundaries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Questions</div>
+      <h2>Questions I revisit often.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>How do systems fail under pressure?</h5>
+          <p>I think about bottlenecks, cascading failures, contention points, and whether software degrades gracefully when assumptions break.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>Where should optimization happen?</h5>
+          <p>Sometimes code is blamed when the issue is schema, query design, or architecture boundaries. That distinction interests me.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>When should systems be simplified?</h5>
+          <p>I revisit whether complexity is solving a real problem or just making a system harder to reason about.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>What happens when assumptions change?</h5>
+          <p>Scale, data growth, and usage patterns often expose assumptions hidden in initial designs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Lessons</div>
+      <h2>Lessons I keep returning to.</h2>
+    </div>
+    <div class="card-modern">
+      <p><strong>Systems are often constrained more by design decisions than by raw infrastructure.</strong> Good schema choices, simpler workflows, and clear ownership often matter before bigger servers or more layers do.</p>
+      <p><strong>Operational problems usually reveal software problems.</strong> Many issues show up first as workflow pain, support pain, or reporting pain — long before they appear as obvious engineering problems.</p>
+      <p><strong>Maintainability compounds.</strong> Clean structures pay off over time just as messy systems accumulate interest in the opposite direction.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Deepen</div>
+      <h2>Topics I want to go deeper into.</h2>
+    </div>
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <span class="badge-modern">Concurrency Control</span>
+      <span class="badge-modern">Queue Architectures</span>
+      <span class="badge-modern">Caching Strategy</span>
+      <span class="badge-modern">Distributed Systems</span>
+      <span class="badge-modern">Fault Tolerance</span>
+      <span class="badge-modern">Event-Driven Patterns</span>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Mistakes</div>
+      <h2>Mistakes that taught me something.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Optimization Too Early</h5>
+          <p>Not every performance concern needs immediate complexity. Sometimes the right move is measurement first, optimization second.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Schema Decisions Echo</h5>
+          <p>Small schema choices often have bigger downstream effects than they initially appear. A column type or index decision can shape application behavior for years.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Debugging Teaches Design</h5>
+          <p>Some of the best design lessons come from investigating failures and unexpected behavior rather than from theory alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Thought Experiments</div>
+      <h2>Thought experiments I run.</h2>
+    </div>
+    <div class="card-modern">
+      <p><strong>If usage increased 10x tomorrow, what would break first?</strong> Query pressure, queues, write contention, reporting load — I like thinking through bottlenecks before they happen.</p>
+      <p><strong>If a workflow became distributed, what assumptions stop working?</strong> Coordination, consistency, and boundaries between services reveal interesting constraints.</p>
+      <p><strong>What parts of a system deserve simplification before scaling?</strong> Sometimes scaling begins with removing complexity, not adding more architecture.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in" style="padding-bottom:80px;">
+    <div class="section-header">
+      <div class="label">Purpose</div>
+      <h2>Why this page exists.</h2>
+    </div>
+    <div class="card-modern" style="max-width:700px;">
+      <p style="margin:0;">Projects show what I have built. This page exists to show how I think while building — the questions I ask, the trade-offs I notice, and the principles I'm gradually shaping as an engineer.</p>
+    </div>
+  </section>
+</div>
+
+<div class="footer">
+  <div class="container">&copy; 2026 Rohan Raj Singh &mdash; Software Engineer</div>
+</div>
+
+<script src="assets/bootstrap.js"></script>
+<script src="assets/script.js"></script>
+</body>
 </html>

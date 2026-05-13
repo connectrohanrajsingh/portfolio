@@ -1,26 +1,31 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const btn = document.getElementById("themeToggle");
-
-    if (localStorage.getItem("theme") === "dark") {
-        if (btn) btn.innerHTML = "☀️";
+  if (btn) {
+    if (localStorage.getItem('theme') !== 'light') {
+      btn.innerHTML = '\u2600\uFE0F';
     }
 
-    if (btn) {
-        btn.addEventListener("click", function () {
+    btn.addEventListener('click', function () {
+      root.classList.toggle('dark-mode');
+      const isDark = root.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      this.innerHTML = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    });
+  }
 
-            document.documentElement.classList.toggle("dark-mode");
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-            if (document.documentElement.classList.contains("dark-mode")) {
-                localStorage.setItem("theme", "dark");
-                this.innerHTML = "☀️";
-            } else {
-                localStorage.setItem("theme", "light");
-                this.innerHTML = "🌙";
-            }
-
-        });
-    }
-
+  document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 });

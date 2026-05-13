@@ -1,166 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Rohan Raj Singh</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="assets/bootstrap.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+  <script src="assets/dark-mode.js"></script>
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>experience</title>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img class="navbar-logo" src="assets/logo.png" alt="RRS"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <div class="navbar-nav ms-auto align-items-center gap-1">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="tech-stack.html">Tech Stack</a>
+        <a class="nav-link" href="engineering-notes.html">Notes</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" id="themeToggle">&#127769;</button>
+      </div>
+    </div>
+  </div>
+</nav>
 
-        <link rel="icon" href="assets/favicon.png" type="image/png">
-        <link href="assets/bootstrap.css" rel="stylesheet">
-        <link href="assets/style.css" rel="stylesheet">
-        <script src="assets/dark-mode.js"></script>
-    </head>
+<div class="container">
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Professional Experience</div>
+      <h2>Building software around real-world operational complexity.</h2>
+      <p>Production engineering focused on workflows, scale, databases, and problem-solving since February 2022.</p>
+    </div>
+  </section>
 
-    <body>
-        <nav class='navbar navbar-expand-lg border-bottom bg-white sticky-top shadow-sm'>
-            <div class='container'>
-                <a class='navbar-brand fw-semibold text-primary' href='index.html'><img class="navbar-logo" src="assets/logo.png" alt="RRS Logo"></a>
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Timeline</div>
+      <h2>Career path.</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="card-modern">
+          <div class="d-flex justify-content-between flex-wrap align-items-start mb-2">
+            <h5 style="margin:0;">Software Engineer</h5>
+            <span class="badge-modern badge-primary">Feb 2022 — Present</span>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Asfera Technologies &middot; Kalkaji, New Delhi</p>
+          <p>Developed and maintained numerous high-impact web applications, demonstrating expertise in full-stack development, database design, and API integration. Leading projects across citizen services, complaint management, automation, and learning platforms.</p>
 
-                <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#mainNav'>
-                    <span class='navbar-toggler-icon'></span>
-                </button>
-
-                <div class='collapse navbar-collapse' id='mainNav'>
-                    <div class='navbar-nav ms-auto gap-lg-2 pt-3 pt-lg-0'>
-                        <a class="nav-link" href='index.html'>Overview</a>
-                        <a class="nav-link active fw-semibold" href='experience.html'>Experience</a>
-                        <a class="nav-link" href='projects.html'>Projects</a>
-                        <a class="nav-link" href='engineering-notes.html'>Engineering Notes</a>
-                        <a class="nav-link" href='tech-stack.html'>Tech Stack</a>
-                        <a class="nav-link" href='contact.html'>Contact</a>
-                        <button class="theme-toggle" id="themeToggle">🌙</button>
-                    </div>
-                </div>
+          <div style="margin-top:20px;">
+            <h6 style="font-weight:600;margin-bottom:12px;">Key Projects</h6>
+            <div class="d-flex flex-column gap-3">
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">UGC Service Platform</h6>
+                <p style="font-size:0.8rem;margin:0;">Core PHP + MySQL site handling 50K+ hits per day. Students file undertakings, download PDFs, lodge and track complaints, and submit feedback. Manages college compliance reporting in PDF, CSV, and Excel formats. Integrated APIs for mobile app support and call center data syncing.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">UHBVN Complaint Management System</h6>
+                <p style="font-size:0.8rem;margin:0;">Core PHP + MySQL system handling IVRS-registered complaints with multi-level resolution tracking, user feedback loops, and automatic escalation to the Saral portal. Processes more than 10K complaints daily. Database optimized with normalization and temporary tables for large data reporting.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Multi-Department Complaint Systems</h6>
+                <p style="font-size:0.8rem;margin:0;">Built complaint management systems for PMJAY, UPSRTC, WHEELSEYE, and PRASAR BHARTI, replicating core complaint tracking, feedback, reporting, and notification functionalities across diverse departmental requirements.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">SMS Automator</h6>
+                <p style="font-size:0.8rem;margin:0;">Core PHP + MySQL system to send templated SMS messages across various projects. Features include multiple SMS server support, unique ID-based locking of phone numbers, retry mechanisms for failures, and detailed logging of all sent messages and responses.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Email Automator</h6>
+                <p style="font-size:0.8rem;margin:0;">Similar functionality to the SMS automator, utilizing different SMTP servers for email dispatch with retry logic and comprehensive logging.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Proficiency Evaluation System</h6>
+                <p style="font-size:0.8rem;margin:0;">Built for Digitech, enabling multi-subject user evaluation, progress tracking, and report generation in PDF, CSV, and Excel formats.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Online Learning Platform</h6>
+                <p style="font-size:0.8rem;margin:0;">Full-fledged Django platform managing student and teacher accounts, courses, lessons, assignments, student submissions, and file or image uploads.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Python Utilities & CLI Games</h6>
+                <p style="font-size:0.8rem;margin:0;">Python utility modules for batch renaming files with UUIDs and cleaning CSV data for direct SQL import. Built CLI games including Snake & Ladder and Rock Paper Scissors with player ID tracking and persistent score saving.</p>
+              </div>
+              <div class="card-modern" style="padding:14px;box-shadow:none;">
+                <h6 style="font-size:0.85rem;">Convoque — Call Center Management Suite</h6>
+                <p style="font-size:0.8rem;margin:0;">Full-featured platform built with Laravel 12. Features campaign management, predictive dialing, CForm (custom form builder) for call scripts, CDSet management with dial sequences and column mapping, disposition trees, DID routing, trunk/extension management, DNC lists, action profiles, working hours and holiday calendars, break management, live performance monitoring, and comprehensive report generation. Uses Laravel Reverb for real-time event handling and Horizon for queue management.</p>
+              </div>
             </div>
-        </nav>
-        <div class='container py-5'>
 
-            <section class='mb-5'>
-                <div class='row align-items-center g-4'>
-                    <div class='col-lg-8'>
-                        <div class='text-uppercase small text-secondary mb-2'>Professional Experience</div>
-                        <h1 class='display-6 text-primary mb-3'>Building software around real-world operational complexity.</h1>
-                        <p class='lead text-secondary'>Production engineering focused on workflows, scale, databases and problem-solving.</p>
-                    </div>
-                    <div class='col-lg-4'>
-                        <div class='border rounded p-4 bg-white shadow-sm'>
-                            <div class='fw-semibold'>Experience Snapshot</div>
-                            <hr>
-                            <div>• 2022–Present</div>
-                            <div>• Full stack product engineering</div>
-                            <div>• High-volume workflow systems</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Timeline</h3>
-
-                <div class='border-start border-4 border-primary ps-4'>
-
-                    <div class='card border-0 shadow-sm mb-4'>
-                        <div class='card-body'>
-                            <div class='d-flex justify-content-between flex-wrap mb-2'>
-                                <h5 class='mb-0'>Software Engineer — Asfera Technologies</h5>
-                                <small class='text-muted'>2022 — Present</small>
-                            </div>
-                            <p class='text-muted'>Kalkaji, New Delhi</p>
-                            <p>Building workflow-heavy software systems, backend modules, reporting platforms and automation tooling across multiple domains.</p>
-                            <div class='row g-3 mt-2'>
-                                <div class='col-md-6'>
-                                    <ul class='small mb-0'>
-                                        <li>Developed high traffic service platforms</li>
-                                        <li>Built complaint management ecosystems</li>
-                                        <li>API integrations and reporting modules</li>
-                                    </ul>
-                                </div>
-                                <div class='col-md-6'>
-                                    <ul class='small mb-0'>
-                                        <li>Database optimization work</li>
-                                        <li>Automation systems engineering</li>
-                                        <li>Workflow-driven application design</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Impact Areas</h3>
-                <div class='row g-3'>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 h-100 bg-white shadow-sm'>
-                            <h6 class='text-primary'>Scale</h6>
-                            <p class='small mb-0'>Systems supporting high-volume usage and complaint processing.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 h-100 bg-white shadow-sm'>
-                            <h6 class='text-success'>Optimization</h6>
-                            <p class='small mb-0'>Normalization, temporary tables, performance-oriented reporting workflows.</p>
-                        </div>
-                    </div>
-                    <div class='col-md-4'>
-                        <div class='border rounded p-4 h-100 bg-white shadow-sm'>
-                            <h6 class='text-warning'>Automation</h6>
-                            <p class='small mb-0'>SMS/email automation systems with retries, logging and controls.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Representative Work</h3>
-                <div class='card border-0 shadow-sm mb-3'>
-                    <div class='card-body'>
-                        <h6>UGC Service Platform</h6>
-                        <p class='small text-muted mb-1'>Undertakings, complaints, reporting, feedback workflows.</p>
-                    </div>
-                </div>
-                <div class='card border-0 shadow-sm mb-3'>
-                    <div class='card-body'>
-                        <h6>Complaint Management Systems</h6>
-                        <p class='small text-muted mb-1'>Cross-domain grievance resolution and escalation models.</p>
-                    </div>
-                </div>
-                <div class='card border-0 shadow-sm'>
-                    <div class='card-body'>
-                        <h6>Evaluation + Learning Platforms</h6>
-                        <p class='small text-muted mb-1'>Assessment systems and Django-based learning platform.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class='mb-5'>
-                <h3 class='mb-4'>Education</h3>
-                <div class='row g-3'>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm'>
-                            <strong>MCA</strong><br>
-                            <span class='text-muted small'>IGNOU</span>
-                        </div>
-                    </div>
-                    <div class='col-md-6'>
-                        <div class='border rounded p-4 bg-white shadow-sm'>
-                            <strong>BCA</strong><br>
-                            <span class='text-muted small'>Cimage, Patna</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h3 class='mb-3'>Looking Ahead</h3>
-                <p>Current trajectory is moving from application engineering deeper into software architecture, scalable system design and stronger backend specialization.</p>
-            </section>
+          <div style="margin-top:16px;">
+            <p style="margin:0;"><strong>Current focus:</strong> Actively building <strong>Convoque</strong>, a full-featured call center management suite in Laravel 12.</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="assets/bootstrap.js"></script>
-        <script src="assets/script.js"></script>
-    </body>
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Impact</div>
+      <h2>Areas of impact.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Scale</h5>
+          <p>Systems supporting 50K+ daily hits and 10K+ daily complaint registrations. Built for high-volume service processing with structured workflows across citizen and departmental platforms.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Optimization</h5>
+          <p>Schema normalization, temporary table strategies, query plan analysis, and performance-oriented reporting workflows enabling efficient large-scale data handling.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-modern">
+          <h5>Automation</h5>
+          <p>SMS and email automation systems supporting multiple servers, with configurable retry mechanisms, unique ID-based locking, and full audit logging for operational visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section fade-in">
+    <div class="section-header">
+      <div class="label">Education</div>
+      <h2>Academic background.</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>MCA — Master of Computer Applications</h5>
+          <p style="color:var(--text-muted);margin:0;">IGNOU, New Delhi — 2025</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-modern">
+          <h5>BCA — Bachelor of Computer Applications</h5>
+          <p style="color:var(--text-muted);margin:0;">Cimage College, Patna — 2018</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in" style="padding-bottom:80px;">
+    <div class="section-header">
+      <div class="label">Direction</div>
+      <h2>Looking ahead.</h2>
+    </div>
+    <div class="card-modern" style="max-width:700px;">
+      <p style="margin:0;">Moving from application engineering deeper into software architecture, scalable system design, and stronger backend specialization. Interested in roles where engineering depth, system thinking, and practical problem-solving are valued over technology buzzwords.</p>
+    </div>
+  </section>
+</div>
+
+<div class="footer">
+  <div class="container">&copy; 2026 Rohan Raj Singh &mdash; Software Engineer</div>
+</div>
+
+<script src="assets/bootstrap.js"></script>
+<script src="assets/script.js"></script>
+</body>
 </html>
