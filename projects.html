@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Rohan Raj Singh</title>
+  <meta name="description" content="Engineering projects by Rohan Raj Singh — high-traffic citizen service platforms, complaint management systems, automation engines, and call center suites built with PHP, Laravel, and MySQL.">
+  <meta property="og:title" content="Projects — Rohan Raj Singh">
+  <meta property="og:description" content="Case studies of production backend systems — workflow platforms, automation engines, and data-intensive applications built at scale.">
+  <meta property="og:url" content="https://rohanrajsingh.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link href="assets/bootstrap.css" rel="stylesheet">
   <link href="assets/style.css" rel="stylesheet">
@@ -66,6 +72,37 @@
           <p style="font-size:0.9rem;">Scale handling (50K+ hits/day), structured data flow, multi-format reporting, API integration, and maintainable codebase.</p>
         </div>
       </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  Citizen Portal ──▶ REST APIs ──▶ Application Layer (Core PHP)
+                                        │
+                          ┌──────────────┼──────────────────┐
+                          ▼              ▼                  ▼
+                     MySQL DB     PDF/CSV/Excel Gen    Mobile App API
+                          │              │
+                          └────── Reporting ──────┘</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Daily Traffic</td><td>50K+ hits</td></tr>
+            <tr><td>Output Formats</td><td>PDF, CSV, Excel</td></tr>
+            <tr><td>Integrations</td><td>Mobile App, Call Center APIs</td></tr>
+            <tr><td>Users</td><td>Students, College Admin</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Optimized MySQL joins for high-volume reporting queries across departments</li>
+            <li>Handled concurrent PDF generation without resource exhaustion under load</li>
+            <li>Designed role-based access for multi-department data isolation</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="card-modern mb-4">
@@ -86,6 +123,37 @@
         <div class="col-md-4">
           <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Focus</h6>
           <p style="font-size:0.9rem;">Workflow automation, database optimization, data integrity, and reporting transparency across the grievance lifecycle.</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  IVRS ──▶ Complaint Registration ──▶ Multi-Level Resolution
+                                          │
+                                    Escalation Engine
+                                          │
+                                    Saral Portal (Govt API Integration)
+                                          │
+                                    Feedback Loop & Closure</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Daily Volume</td><td>10K+ complaints</td></tr>
+            <tr><td>Escalation</td><td>Automated to Saral Portal</td></tr>
+            <tr><td>Channels</td><td>IVRS, Web, Mobile</td></tr>
+            <tr><td>SLA Tracking</td><td>Multi-level with auto-escalation</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Normalized schema with temporary tables for large-scale reporting at 10K+/day</li>
+            <li>Handled race conditions in concurrent complaint assignment workflows</li>
+            <li>Built configurable escalation rules engine for multi-level SLA enforcement</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -110,6 +178,35 @@
           <p style="font-size:0.9rem;">Pattern reuse, workflow adaptability, notification integration, and departmental customization.</p>
         </div>
       </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  Common Core Platform
+    ├── PMJAY Module
+    ├── UPSRTC Module
+    ├── WHEELSEYE Module
+    └── PRASAR BHARTI Module
+  (Shared: tracking, feedback, reporting, notifications)</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Departments</td><td>PMJAY, UPSRTC, WHEELSEYE, PRASAR BHARTI</td></tr>
+            <tr><td>Core Patterns</td><td>Tracking, Feedback, Reporting, Notifications</td></tr>
+            <tr><td>Customization</td><td>Per-department workflow rules & data fields</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Maintained consistency across department-specific workflow rule variations</li>
+            <li>Adapted reporting engine to diverse data field requirements per department</li>
+            <li>Ensured notification integration worked uniformly across all modules</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="card-modern mb-4">
@@ -125,11 +222,43 @@
         </div>
         <div class="col-md-4">
           <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Architecture</h6>
-          <p style="font-size:0.9rem;">Multi-tenant Laravel 12 application using Fortify for authentication, Spatie for fine-grained RBAC, Laravel Reverb for real-time WebSocket events (dial queue, popups), Horizon for queue management, Tailwind CSS 4 with Vite for frontend, and phpoffice/phpspreadsheet for Excel/CSV reporting.</p>
+          <p style="font-size:0.9rem;">Multi-tenant Laravel 12 application using Fortify for authentication, Spatie for fine-grained RBAC, Laravel Reverb for real-time WebSocket events (dial queue, popups), Horizon for queue management, Bootstrap for frontend, and phpoffice/phpspreadsheet for Excel/CSV reporting.</p>
         </div>
         <div class="col-md-4">
           <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Focus</h6>
           <p style="font-size:0.9rem;">Modular architecture, real-time event handling, queue-driven processing, comprehensive RBAC, and building a production-grade system from the ground up.</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  Campaign Manager ──▶ Predictive Dialer ──▶ CForm + CDSets
+                              │                           │
+                    Disposition Trees              Reverb Events
+                              │                           │
+                    Horizon Queues ──────────▶ Real-Time Monitor
+                              │
+                    Spatie RBAC ──▶ Reporting Engine ──▶ CSV/Excel</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Framework</td><td>Laravel 12</td></tr>
+            <tr><td>Real-time</td><td>Laravel Reverb (WebSockets)</td></tr>
+            <tr><td>Queues</td><td>Laravel Horizon</td></tr>
+            <tr><td>Auth</td><td>Fortify + Spatie RBAC</td></tr>
+            <tr><td>Frontend</td><td>Bootstrap</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Designed modular architecture with clean separation of campaign, dialing, and form subsystems</li>
+            <li>Implemented real-time WebSocket events for live agent call monitoring</li>
+            <li>Built configurable disposition trees with dynamic form rendering engine</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -154,6 +283,36 @@
           <p style="font-size:0.9rem;">Multi-server support, ID-based deduplication, retry logic, and audit logging.</p>
         </div>
       </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  Project A ──┐
+  Project B ──┼──▶ SMS Dispatcher ──▶ Server 1
+  Project C ──┘         │              Server 2 (Failover)
+                   ID Locking           Server 3 (Failover)
+                   Retry Queue
+                   Audit Log</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Multi-Server</td><td>Yes, with automatic failover</td></tr>
+            <tr><td>Deduplication</td><td>ID-based phone number locking</td></tr>
+            <tr><td>Retry</td><td>Configurable policies</td></tr>
+            <tr><td>Logging</td><td>Full audit trail</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Implemented ID-based phone locking to prevent duplicate sends at scale</li>
+            <li>Built automatic server failover without message loss during transport errors</li>
+            <li>Designed configurable retry mechanism with audit trail for every delivery attempt</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="card-modern mb-4">
@@ -174,6 +333,33 @@
         <div class="col-md-4">
           <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Focus</h6>
           <p style="font-size:0.9rem;">Pattern reuse, SMTP handling, process stability, and audit trail consistency.</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Architecture</h6>
+        <div class="arch-diagram">  Projects ──▶ Email Dispatcher ──▶ SMTP Pool
+                    Retry Logic         Retry Queue
+                    Audit Trail         Delivery Log</div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">System Specs</h6>
+          <table class="sys-specs">
+            <tr><td>Architecture</td><td>Mirrors SMS Automator pattern</td></tr>
+            <tr><td>Transport</td><td>Multiple SMTP servers</td></tr>
+            <tr><td>Retry</td><td>Configurable policies</td></tr>
+            <tr><td>Logging</td><td>Full audit trail</td></tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h6 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">Engineering Challenges</h6>
+          <ul class="challenge-list">
+            <li>Extended proven SMS automator pattern to email with SMTP-specific error handling</li>
+            <li>Ensured audit trail consistency across both messaging channels</li>
+            <li>Maintained process stability during high-volume bulk dispatch cycles</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -401,3 +401,75 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+.hero-cta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.hero-cta-bar .btn-sm {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-cta-bar .btn-sm .icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.arch-diagram {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  overflow-x: auto;
+  white-space: pre;
+  margin: 8px 0;
+}
+html.dark-mode .arch-diagram { background: #0d1117; }
+
+.sys-specs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 8px 0;
+}
+.sys-specs td {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.sys-specs td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  width: 40%;
+  white-space: nowrap;
+}
+
+.challenge-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+.challenge-list li {
+  padding: 4px 0 4px 20px;
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.challenge-list li::before {
+  content: '\25B8';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
