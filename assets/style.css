@@ -29,7 +29,7 @@ html.dark-mode {
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; overflow-anchor: auto; }
 
 body {
   margin: 0;
@@ -139,7 +139,10 @@ html.dark-mode .nav-link.active { background: rgba(88,166,255,0.12); }
 html.dark-mode .contact-link:hover { border-color: #58a6ff; color: #58a6ff; }
 html.dark-mode .principle-block { border-left-color: #58a6ff; }
 html.dark-mode .stat-number { color: #58a6ff; }
-html.dark-mode .hero::before { background: radial-gradient(circle, rgba(88,166,255,0.08) 0%, transparent 70%); }
+html.dark-mode .stat-card { border-color: #30363d; background: #161b22; }
+html.dark-mode .stat-label { color: #8b949e; }
+html.dark-mode .hero::before { background: radial-gradient(circle, rgba(88,166,255,0.12) 0%, transparent 70%); }
+html.dark-mode .hero .lead { color: #c9d1d9; }
 
 /* ─── Hero ─── */
 .hero {
@@ -175,10 +178,16 @@ html.dark-mode .hero::before { background: radial-gradient(circle, rgba(88,166,2
   padding: 20px;
   box-shadow: var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .stat-number { font-size: 1.8rem; font-weight: 700; color: var(--primary); line-height: 1.2; }
-.stat-label { font-size: 0.85rem; color: var(--text-muted); }
+.stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
 
 /* ─── Sections ─── */
 .section { padding: 64px 0; }
@@ -217,6 +226,9 @@ html.dark-mode .hero::before { background: radial-gradient(circle, rgba(88,166,2
 
 .card-modern h5 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
 .card-modern p { font-size: 0.9rem; margin: 0; }
+.card-modern.card-nested { box-shadow: none; padding: 18px; }
+.card-modern.card-sub { box-shadow: none; padding: 14px; }
+.card-modern.card-dashed { box-shadow: none; border-style: dashed; }
 
 /* ─── Timeline ─── */
 .timeline {
@@ -277,8 +289,11 @@ html.dark-mode a:hover { color: #79c0ff; }
 html.dark-mode .badge-modern { border-color: #30363d; color: #b0b8c4; }
 html.dark-mode .badge-modern:hover { border-color: #58a6ff; color: #58a6ff; }
 html.dark-mode .card-modern:hover { border-color: #58a6ff; }
+html.dark-mode .hero-quote { border-left-color: #58a6ff; }
+html.dark-mode .project-label { color: #8b949e; }
 html.dark-mode .btn-outline-secondary { color: #b0b8c4; border-color: #30363d; }
 html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6fc; }
+html.dark-mode .card-cta { border-color: #58a6ff !important; }
 
 /* ─── Feature List ─── */
 .feature-list { list-style: none; padding: 0; margin: 0; }
@@ -337,7 +352,7 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
 .section-header {
   margin-bottom: 40px;
 }
-.section-header .label {
+.label, .section-header .label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -365,6 +380,7 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
 .gap-2 { gap: 8px; }
 .gap-3 { gap: 16px; }
 .gap-4 { gap: 24px; }
+.m-0 { margin: 0; }
 .mb-2 { margin-bottom: 8px; }
 .mb-3 { margin-bottom: 16px; }
 .mb-4 { margin-bottom: 24px; }
@@ -372,8 +388,13 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
 .mt-2 { margin-top: 8px; }
 .mt-3 { margin-top: 16px; }
 .mt-4 { margin-top: 24px; }
+.p-0 { padding: 0; }
 .p-3 { padding: 16px; }
 .p-4 { padding: 24px; }
+.fw-600 { font-weight: 600; }
+.fs-small { font-size: 0.85rem; }
+.fs-xs { font-size: 0.8rem; }
+.shadow-none { box-shadow: none !important; }
 
 /* ─── Animations ─── */
 .fade-in {
@@ -390,6 +411,7 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
 @media (max-width: 768px) {
   .hero { padding: 48px 0 40px; }
   .section { padding: 40px 0; }
+  .section-last { padding-bottom: 48px; }
   .container { padding: 0 16px; }
 }
 
@@ -420,6 +442,14 @@ html.dark-mode .btn-outline-secondary:hover { background: #30363d; color: #f0f6f
 .hero-cta-bar .btn-sm .icon {
   font-size: 0.9rem;
   line-height: 1;
+}
+
+.btn-rounded {
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-xs-rounded {
+  border-radius: 6px;
 }
 
 .arch-diagram {
@@ -473,3 +503,70 @@ html.dark-mode .arch-diagram { background: #0d1117; }
   color: var(--primary);
   font-weight: 700;
 }
+
+/* ─── Hero Quote ─── */
+.hero-quote {
+  border-left: 3px solid var(--primary);
+  padding-left: 16px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ─── Project Labels ─── */
+.project-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ─── Subsection Title ─── */
+.subsection-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ─── Contact Detail ─── */
+.contact-detail {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ─── Card CTA ─── */
+.card-cta {
+  border-color: var(--primary);
+  border-width: 2px;
+  text-align: center;
+  padding: 40px;
+}
+.card-cta p {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+/* ─── Section Last ─── */
+.section-last {
+  padding-bottom: 80px;
+}
+
+/* ─── Lead Emphasis ─── */
+.lead-emphasis {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.mw-540 { max-width: 540px; }
+.text-muted-custom { color: var(--text-muted); }
+
+/* ─── Timeline Heading ─── */
+.timeline-heading { margin: 0; }
+
+/* ─── Icon Variants ─── */
+.icon-github { background: rgba(0,0,0,0.08); }
+.icon-linkedin { background: rgba(10,102,194,0.1); }
