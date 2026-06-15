@@ -1,0 +1,22 @@
+# Rohan Raj Singh — Software Engineer
+
+> Portfolio and engineering profile of Rohan Raj Singh, a backend/systems engineer building reliable systems, workflow-driven applications, and data-intensive platforms at scale. Based in New Delhi, India. MCA, Software Engineering.
+
+## Pages
+
+- [Home](https://rohanrajsingh.com/): Portfolio homepage — overview of skills, focus areas (Application Engineering, Database & Data Systems, Automation & Tooling), featured projects, and engineering principles.
+- [Experience](https://rohanrajsingh.com/experience): Professional experience at Asfera Technologies (Feb 2022 — Present). Key projects include UGC Service Platform (50K+ hits/day), UHBVN Complaint Management System (10K+ complaints/day), Convoque Call Center Suite, SMS & Email Automation Engines, and more.
+- [Projects](https://rohanrajsingh.com/projects): Detailed engineering case studies — UGC Service Platform, UHBVN Complaint System, Multi-Department Complaint Systems, Convoque Call Center Suite, SMS Automation Engine, Email Automation Engine. Each includes problem context, approach, architecture diagrams, and engineering challenges.
+- [Tech Stack](https://rohanrajsingh.com/tech-stack): Engineering capability map. Primary: PHP, Laravel, Core PHP, MySQL, Bootstrap, JavaScript. Working knowledge: Python, Django. Growing into: System Design, Distributed Systems, Software Architecture, Concurrency.
+- [Engineering Notes](https://rohanrajsingh.com/engineering-notes): Systems thinking, architecture principles, database reasoning, concurrency concepts, scaling thoughts, and engineering lessons learned from production systems.
+- [Contact](https://rohanrajsingh.com/contact): Email, phone, location (Govindpuri, New Delhi), GitHub, LinkedIn, and resume download.
+
+## Social
+
+- GitHub: https://github.com/connectrohanrajsingh
+- LinkedIn: https://www.linkedin.com/in/connectrohanrajsingh/
+- Email: connectrohanrajsingh@gmail.com
+
+## Skills
+
+PHP, Laravel, Core PHP, MySQL, Python, Django, Bootstrap, JavaScript, HTML/CSS, Git, Linux, Postman, Apache, API Integration, OOP, Query Optimization, System Design, Schema Design, Workflow Automation
