@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rohanrajsingh.com/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rohanrajsingh.com/experience.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://rohanrajsingh.com/experience</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rohanrajsingh.com/projects.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://rohanrajsingh.com/projects</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rohanrajsingh.com/tech-stack.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://rohanrajsingh.com/tech-stack</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rohanrajsingh.com/engineering-notes.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://rohanrajsingh.com/engineering-notes</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rohanrajsingh.com/contact.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://rohanrajsingh.com/contact</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
